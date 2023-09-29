@@ -7,15 +7,17 @@
 (нужно будет ее создать), которая будет принимать введенное пользователем 
 число. Функция должна вычесть из переданного ей числа 13% и вывести в консоль 
 сообщение "Размер заработной платы за вычетом налогов равен N."
-*/
-const nalog = (number) => {
-  return (number = number - number * 0.13);
-};
-const number = prompt('Введите число');
-if (Number.isFinite(number)) {
-  console.log('Значение задано неверно');
-} else {
-  console.log(
-    `Размер заработной платы за вычетом налогов равен ${nalog(number)}`
-  );
+*/ function script() {
+  const nalog = (number) => {
+    return (number = number - number * 0.13);
+  };
+  const number = prompt('Введите число');
+  if (Number.isFinite(number)) {
+    console.log('Значение задано неверно');
+  } else {
+    console.log(
+      `Размер заработной платы за вычетом налогов равен ${nalog(number)}`
+    );
+  }
 }
+script();

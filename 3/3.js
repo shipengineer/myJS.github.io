@@ -9,17 +9,24 @@
 Примечание: Условимся, что пользователь всегда вводит корректные значения, 
 три числа. Проверять их не нужно.
 */
+function script() {
+  //инициация массива с элементами-запросами
+  const arrayToMax = [
+    prompt('Первое число?'),
+    prompt('Второе число?'),
+    prompt('Третье число?'),
+  ];
+  function max(array) {
+    console.log(arrayToMax);
+    //сортировка массива по убыванию и вытаскивание 0-го элемента массива
+    // замена на Math.max()?
 
-const arrayToMax = [
-  prompt('Первое число?'),
-  prompt('Второе число?'),
-  prompt('Третье число?'),
-];
-function max(array) {
-  console.log(
-    `Максимальное значение среди чисел ${array[0]}, ${array[1]},${
-      array[2]
-    } равно ${array.max()}.`
-  );
+    console.log(
+      `Максимальное значение среди чисел ${array[0]}, ${array[1]}, ${
+        array[2]
+      } равно ${arrayToMax.sort((a, b) => b - a)[0]}.`
+    );
+  }
+  max(arrayToMax);
 }
-max(arrayToMax);
+script();

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -18,4 +18,52 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function script() {
+  //функция Сложение
+  const summary = (a, b) => {
+    return a + b;
+  };
+  //функция Разность
+  const subtraction = (a, b) => {
+    return a >= b ? a - b : b - a;
+  };
+  //функция Умножение
+  const multiplication = (a, b) => {
+    return a * b;
+  };
+  //функция Деление
+  const divide = (a, b) => {
+    return a / b;
+  };
+  const a = +prompt('Первое число?');
+  const b = +prompt('Второе число');
+  const operator = +prompt(
+    'Выберите выполнение 1-сложить, 2-вычесть, 3-умножить, 4-разделить'
+  );
+
+  switch (operator) {
+    case 1: {
+      console.log(summary(a, b));
+      break;
+    }
+
+    case 2: {
+      console.log(subtraction(a, b));
+      break;
+    }
+
+    case 3: {
+      console.log(multiplication(a, b));
+      break;
+    }
+
+    case 4: {
+      console.log(divide(a, b));
+      break;
+    }
+    default: {
+      console.log('неверный ввод, завершение...');
+    }
+  }
+}
+script();
